@@ -1,0 +1,707 @@
+[
+    {
+        "question": "Which of the following is a finite, non-empty set of symbols?",
+        "options": {
+            "a": "Language",
+            "b": "Grammar",
+            "c": "DFA",
+            "d": "Alphabet"
+        },
+        "correctOption": "d",
+        "explanation": "An alphabet is a finite, non-empty set of symbols that are used to form strings. (Lecture 1, Slide 7)"
+    },
+    {
+        "question": "What is a set of strings made up of symbols from a given alphabet?",
+        "options": {
+            "a": "Set",
+            "b": "Language",
+            "c": "Alphabet",
+            "d": "Edge"
+        },
+        "correctOption": "b",
+        "explanation": "A language is defined as a set of strings that are formed by combining symbols from a specific alphabet. (Lecture 1, Slide 7)"
+    },
+    {
+        "question": "Which of the following is a finite list of rules defining a language?",
+        "options": {
+            "a": "Grammar",
+            "b": "String",
+            "c": "Language",
+            "d": "Alphabet"
+        },
+        "correctOption": "a",
+        "explanation": "A grammar is a set of rules that formally define the structure and syntax of a language.  It specifies how strings are formed. (Lecture 1, Slide 18)"
+    },
+    {
+        "question": "If u = aabab and v = bbba, what is the concatenation of uv?",
+        "options": {
+            "a": "aabaabbba",
+            "b": "abbbabbaa",
+            "c": "aababbbba",
+            "d": "aabbbbbaa"
+        },
+        "correctOption": "c",
+        "explanation": "Concatenation combines two strings by appending the second string to the end of the first. Therefore, the concatenation of 'aabab' and 'bbba' results in 'aababbbba'.  (Lecture 1, Slide 8)"
+    },
+    {
+        "question": "If u = aab and v = bbba, what is the reverse of (uv)r?",
+        "options": {
+            "a": "bbbaaabbb",
+            "b": "bbbaaab",
+            "c": "abbbbaa",
+            "d": "aabbbba"
+        },
+        "correctOption": "c",
+        "explanation": "First, concatenate u and v to get 'aabbba'. Then reverse the concatenated string to get 'abbbbaa'. (Lecture 1, Slide 8)"
+    },
+    {
+        "question": "Which of the following is the set of strings of any length, including the null string?",
+        "options": {
+            "a": "∑*",
+            "b": "∑¹",
+            "c": "∑º",
+            "d": "∑⁺"
+        },
+        "correctOption": "a",
+        "explanation": "∑* represents the Kleene star operation, which includes all possible strings that can be formed from the alphabet, including the empty (null) string (λ). (Lecture 1, Slide 9)"
+    },
+    {
+        "question": "What is the term for the number of members in a set?",
+        "options": {
+            "a": "Power set",
+            "b": "Size",
+            "c": "Length",
+            "d": "Cardinality"
+        },
+        "correctOption": "d",
+        "explanation": "The cardinality of a set is the number of elements it contains. (General Knowledge)"
+    },
+    {
+        "question": "If w = abba, what is |w| (the length of w) equal to?",
+        "options": {
+            "a": "4",
+            "b": "6",
+            "c": "3",
+            "d": "5"
+        },
+        "correctOption": "a",
+        "explanation": "The length of a string is the number of symbols it contains.  The string 'abba' has 4 symbols. (Lecture 1, Slide 9)"
+    },
+    {
+        "question": "If u and U are strings, what is the length of their concatenation, |uU|?",
+        "options": {
+            "a": "u + U",
+            "b": "|u + U|",
+            "c": "|u| * |U|",
+            "d": "|u| + |U|"
+        },
+        "correctOption": "d",
+        "explanation": "The length of the concatenation of two strings is the sum of their individual lengths. Therefore, |uU| = |u| + |U|. (Lecture 1, Slide 9)"
+    },
+    {
+        "question": "If u = aab and v = bbba, what is the length of the concatenation of uv?",
+        "options": {
+            "a": "4",
+            "b": "5",
+            "c": "10",
+            "d": "7"
+        },
+        "correctOption": "d",
+        "explanation": "The length of 'aab' is 3 and the length of 'bbba' is 4. Their concatenation 'aabbba' has a length of 3+4 = 7.  (Lecture 1, Slide 9)"
+    },
+    {
+        "question": "What is the name for a set with no elements?",
+        "options": {
+            "a": "Empty set",
+            "b": "Null set",
+            "c": "Media set",
+            "d": "a and b"
+        },
+        "correctOption": "d",
+        "explanation": "The name for a set with no elements is empty set or null set. These are same (Lecture 1, Slide 10)"
+    },
+   {
+        "question": "If w = abbaλ, what is |w| equal to?",
+        "options": {
+            "a": "4",
+            "b": "6",
+            "c": "3",
+            "d": "5"
+        },
+        "correctOption": "a",
+        "explanation": "The length of a string is the number of symbols it contains. In w = abbaλ, length of the string is 4 and λ (Lambda) is an empty string whose length is zero (Lecture 1, Slide 10)"
+    },
+      {
+        "question": "What is |λ| equal to?",
+        "options": {
+            "a": "Not found",
+            "b": "0",
+            "c": "1",
+            "d": "None"
+        },
+        "correctOption": "b",
+        "explanation": "The length of an empty (null) string (λ) is equal to zero. (Lecture 1, Slide 10)"
+    },
+    {
+        "question": "What is the set of all subsets of any given set?",
+        "options": {
+            "a": "Language",
+            "b": "Set",
+            "c": "Power set",
+            "d": "String"
+        },
+        "correctOption": "c",
+        "explanation": "A power set is the set of all possible subsets that can be created from a given set, including the empty set and the set itself.  (General Knowledge)"
+    },
+     {
+        "question": "Given w = abbaab, which of the following is NOT a substring?",
+        "options": {
+            "a": "abb",
+            "b": "aabb",
+            "c": "aab",
+            "d": "a"
+        },
+        "correctOption": "b",
+        "explanation": "A sequence of consecutive characters from a string that are considered a part of the string. Here option b is a subsequence, not a substring (Lecture 1, Slide 11)"
+    },
+    {
+        "question": "What do we call a sequence of consecutive characters from a string?",
+        "options": {
+            "a": "Substring",
+            "b": "Subsequence",
+            "c": "Permutation",
+            "d": "Concatenation"
+        },
+        "correctOption": "a",
+        "explanation": "A substring is formed by taking a sequence of consecutive characters from within a string. (Lecture 1, Slide 11)"
+    },
+ {
+        "question": "When w = uv, then v is _________ and u is _________?",
+        "options": {
+            "a": "prefix, suffix",
+            "b": "suffix, prefix",
+            "c": "string, set",
+            "d": "string, suffix"
+        },
+        "correctOption": "b",
+        "explanation": "Given string w = uv where u is prefix and v is suffix, then suffix v follows prefix u (Lecture 1, Slide 11)"
+    },
+ {
+        "question": "if w = abbab, then {1,a,ab,abb} is the set of some of its __________?",
+        "options": {
+            "a": "Prefixes",
+            "b": "Unions",
+            "c": "Suffixes",
+            "d": "Concatinations"
+        },
+        "correctOption": "a",
+        "explanation": "Given w = abbab, the Prefixes are {1,a,ab,abb,abbab}, a prefix is the start of the substring (Lecture 1, Slide 11)"
+    },
+ {
+        "question": "Given w = abba, which of the following is a w²?",
+        "options": {
+            "a": "aabbbbaa",
+            "b": "abbaabba",
+            "c": "abbabba",
+            "d": "None"
+        },
+        "correctOption": "b",
+        "explanation": "A concatenation of the set W (L = LL = L2). Hence, given w = abba, w² is  abbaabba (Lecture 1, Slide 12)"
+    },
+ {
+        "question": "Given w = abba, which of the following is a w⁰?",
+        "options": {
+            "a": "aabbbbaa",
+            "b": "abbaabba",
+            "c": "abbabba",
+            "d": "None"
+        },
+        "correctOption": "d",
+        "explanation": "Given w = abba, then W⁰ = { λ}, (i.e. the set L is 1). Hence, given the options, the correct answer is D (Lecture 1, Slide 12)"
+    },
+    {
+        "question": "What is the set of all possible strings from an alphabet ∑ except λ?",
+        "options": {
+            "a": "∑*",
+            "b": "∑¹",
+            "c": "∑º",
+            "d": "∑⁺"
+        },
+        "correctOption": "d",
+        "explanation": "∑⁺ represents positive closure. It includes all possible strings that can be formed from the alphabet, but it excludes the empty (null) string (λ). (Lecture 1, Slide 12)"
+    },
+    {
+        "question": "What is |{λ}| equal to?",
+        "options": {
+            "a": "Not found",
+            "b": "0",
+            "c": "1",
+            "d": "None"
+        },
+        "correctOption": "c",
+        "explanation": "|{λ}| means the set is contains an empty string. The number of members of a set equals to 1 (Lecture 1, Slide 13)"
+    },
+    {
+        "question": "if L = an b²n and n >= 0 find p",
+        "options": {
+            "a": "S → λ | aSbb",
+            "b": "S → aSbb",
+            "c": "S → λ | aSb | a",
+            "d": "Otherwise"
+        },
+        "correctOption": "a",
+        "explanation": "Can't find the answer"
+    },
+     {
+        "question": "if L = an + 1 b\" and n >= 0 find p",
+        "options": {
+            "a": "S → λ | aSbb",
+            "b": "S → λ | aSb",
+            "c": "S → aSb | a",
+            "d": "Otherwise"
+        },
+        "correctOption": "c",
+        "explanation": "Can't find the answer"
+    },
+    {
+        "question": "Definition of Grammar is consist of __________",
+        "options": {
+            "a": "5-tuple",
+            "b": "4-tuple",
+            "c": "6-tuple",
+            "d": "3-tuple"
+        },
+        "correctOption": "b",
+        "explanation": "In formal languages and automata theory, a grammar is formally defined as a 4-tuple G =(V, T, S, P). (Lecture 1, Slide 18)"
+    },
+ {
+        "question": "A grammar G is defined as a quadruple?",
+        "options": {
+            "a": "G =(V, S, T, P)",
+            "b": "G =(V, T, S, P)",
+            "c": "G =(V, P, S, T)",
+            "d": "G =(S, T, V, P)"
+        },
+        "correctOption": "b",
+        "explanation": "In formal languages and automata theory, a grammar is formally defined as a 4-tuple G =(V, T, S, P). (Lecture 1, Slide 18)"
+    },
+    {
+        "question": "In formal languages and automata, The symbol ∑ is called ___________?",
+        "options": {
+            "a": "alphabet",
+            "b": "Variable",
+            "c": "Start Symbol",
+            "d": "Rule"
+        },
+        "correctOption": "a",
+        "explanation": "In formal languages and automata theory, the term ∑ represents the input alphabet (Lecture 1, Slide 5)"
+    },
+    {
+        "question": "Here is a context-free grammar G: S → AB, A → aA | λ, B → bB | b find V, Σ?",
+        "options": {
+            "a": "V: {A,B}, Σ: {a,b}",
+            "b": "V: {A,B,λ}, Σ: {a,b}",
+            "c": "Both of A, В",
+            "d": "V: {A,B,S}, Σ: {a,b}"
+        },
+        "correctOption": "d",
+        "explanation": "Given a context-free grammar G, a set of variables and also the alphabets for the grammar V: {A,B,S}, Σ: {a,b} (Lecture 1, Slide 18)"
+    },
+ {
+        "question": "A deterministic finite accepter or dfa is defined by the __________",
+        "options": {
+            "a": "quintuple",
+            "b": "tuple",
+            "c": "triple",
+            "d": "None"
+        },
+        "correctOption": "a",
+        "explanation": "A Deterministic Finite Automaton (DFA) is a quintuple in form (Q, Σ, δ, q0, F) (Lecture 2, Slide 31)"
+    },
+     {
+        "question": "Which of the following is not a part of 5-tuple of DFA__________",
+        "options": {
+            "a": "Initial state",
+            "b": "Transition function",
+            "c": "Input alphabet",
+            "d": "Output alphabet"
+        },
+        "correctOption": "d",
+        "explanation": "A Deterministic Finite Automaton (DFA) is a quintuple in form (Q, Σ, δ, q0, F) here F: set of final states and not output alphabet (Lecture 2, Slide 31)"
+    },
+     {
+        "question": "Non acceptance means that the DFA stops in a __________",
+        "options": {
+            "a": "Final State",
+            "b": "Non-Final State",
+            "c": "Trap State",
+            "d": "b and c"
+        },
+        "correctOption": "d",
+        "explanation": "Non acceptance means that the DFA stops in a trap state and non final State (Lecture 2, Slide 32)"
+    },
+ {
+        "question": "In the transition function δ(q0,0) = q1, δ(q1,0) = q1, where q0 initial, q1 final. Which of the following string is Rejected by DFA?",
+        "options": {
+            "a": "0",
+            "b": "00",
+            "c": "100",
+            "d": "000"
+        },
+        "correctOption": "c",
+        "explanation": "In the function above, the strings that are rejected by DFA are the ones that are not found by δ function (Lecture 2, Slide 32)"
+    },
+    {
+        "question": "If L = {a, ba}, which of the following strings is NOT in L*:",
+        "options": {
+            "a": "aababa",
+            "b": "abba",
+            "c": "λ",
+            "d": "aa"
+        },
+        "correctOption": "b",
+        "explanation": "Can't find the answer"
+    },
+     {
+        "question": "If L = {a, ba}, which of the following strings is NOT in L*:",
+        "options": {
+            "a": "aababa",
+            "b": "abba",
+            "c": "λ",
+            "d": "aa"
+        },
+        "correctOption": "b",
+        "explanation": "L* (Kleene closure) contains all possible strings formed by concatenating zero or more strings from L. 'abba' cannot be formed using only 'a' and 'ba'. λ (null string) is always in L*, and 'aababa' and 'aa' can be.  Can't find the answer"
+    },
+
+    {
+        "question": "When the state returns to itself in all transitions, it is called __________?",
+        "options": {
+            "a": "trap state",
+            "b": "end state",
+            "c": "any state",
+            "d": "none"
+        },
+        "correctOption": "a",
+        "explanation": "The Trap states are designed to cause non-acceptance for the DFA (Lecture 2, Slide 32)"
+    },
+    {
+        "question": "symbols can be combined into entities called __________?",
+        "options": {
+            "a": "string",
+            "b": "set",
+            "c": "sentences",
+            "d": "all the above"
+        },
+        "correctOption": "c",
+        "explanation": "Strings are sentences are strings of symbols (Lecture 1, Slide 5)"
+    },
+    {
+        "question": "Who is credited as the pioneer of automata theory and the Father of Modern Computer Science in this lecture?",
+        "options": {
+            "a": "John von Neumann",
+            "b": "Alan Turing",
+            "c": "Edsger Dijkstra",
+            "d": "Grace Hopper"
+        },
+        "correctOption": "b",
+        "explanation": "Alan Turing is recognized for his pioneering work on abstract machines (Turing Machines) and is regarded as the Father of Modern Computer Science. (Lecture 1, Slide 2)"
+    },
+    {
+        "question": "Which of the following is defined as a finite, non-empty set of symbols used in computation theory?",
+        "options": {
+            "a": "String",
+            "b": "Language",
+            "c": "Alphabet",
+            "d": "Grammar"
+        },
+        "correctOption": "c",
+        "explanation": "An alphabet is a finite, non-empty set of symbols from which strings are formed. (Lecture 1, Slide 7)"
+    },
+    {
+        "question": "What does the Kleene star of an alphabet Σ, denoted Σ*, represent?",
+        "options": {
+            "a": "The set of all non-empty strings over Σ",
+            "b": "The set of strings of fixed length over Σ",
+            "c": "The set of all possible strings, including the empty string, over Σ",
+            "d": "The concatenation of two strings from Σ"
+        },
+        "correctOption": "c",
+        "explanation": "Σ* denotes the set of all possible strings (including the empty string λ) that can be constructed from the alphabet Σ. (Lecture 1, Slide 11)"
+    },
+    {
+        "question": "Which operation is used to combine two strings by appending one to the other?",
+        "options": {
+            "a": "Substring",
+            "b": "Reversal",
+            "c": "Concatenation",
+            "d": "Prefixing"
+        },
+        "correctOption": "c",
+        "explanation": "Concatenation is the operation of joining two strings end-to-end. (Lecture 1, Slide 8)"
+    },
+    {
+        "question": "Which operation produces a string that is the mirror image of the original string?",
+        "options": {
+            "a": "Concatenation",
+            "b": "Reverse",
+            "c": "Substring",
+            "d": "Complement"
+        },
+        "correctOption": "b",
+        "explanation": "The reverse operation creates a string by flipping the order of its symbols. (Lecture 1, Slide 8)"
+    },
+    {
+        "question": "What does |w| denote in the context of strings?",
+        "options": {
+            "a": "The set of substrings of w",
+            "b": "The length of w",
+            "c": "The reverse of w",
+            "d": "The prefix of w"
+        },
+        "correctOption": "b",
+        "explanation": "|w| represents the length of the string w, i.e., the number of symbols it contains. (Lecture 1, Slide 9)"
+    },
+    {
+        "question": "Given the string w = 'abba', what is |w|?",
+        "options": {
+            "a": "2",
+            "b": "3",
+            "c": "4",
+            "d": "5"
+        },
+        "correctOption": "c",
+        "explanation": "The string 'abba' has 4 characters, so its length |w| is 4. (Lecture 1, Slide 9)"
+    },
+    {
+        "question": "What is a substring as defined in this lecture?",
+        "options": {
+            "a": "A non-consecutive selection of characters from a string",
+            "b": "A sequence of consecutive characters within a string",
+            "c": "The reverse of a string",
+            "d": "A concatenation of two strings"
+        },
+        "correctOption": "b",
+        "explanation": "A substring is a sequence of consecutive characters taken from within a string. (Lecture 1, Slide 10)"
+    },
+    {
+        "question": "In string operations, what does a prefix of a string refer to?",
+        "options": {
+            "a": "A substring from the middle of the string",
+            "b": "The entire string",
+            "c": "A substring taken from the end of the string",
+            "d": "A substring taken from the beginning of the string"
+        },
+        "correctOption": "d",
+        "explanation": "A prefix is a substring that appears at the beginning of a string. (Lecture 1, Slide 10)"
+    },
+    {
+        "question": "What does a suffix of a string mean?",
+        "options": {
+            "a": "A substring taken from the end of a string",
+            "b": "A substring taken from the beginning of a string",
+            "c": "A string concatenated twice",
+            "d": "The reverse of the string"
+        },
+        "correctOption": "a",
+        "explanation": "A suffix is a substring that appears at the end of a string. (Lecture 1, Slide 10)"
+    },
+    {
+        "question": "Which operation on languages is defined by taking all possible concatenations of strings from the language, including the empty string?",
+        "options": {
+            "a": "Positive Closure",
+            "b": "Kleene Star",
+            "c": "Complementation",
+            "d": "Intersection"
+        },
+        "correctOption": "b",
+        "explanation": "The Kleene star operation (denoted L*) creates the set of all strings that can be formed by concatenating zero or more strings from L, including the empty string. (Lecture 1, Slide 16)"
+    },
+    {
+        "question": "What is the positive closure of a language L (denoted L+)?",
+        "options": {
+            "a": "All strings formed by zero or more concatenations of strings from L, including λ",
+            "b": "All strings formed by one or more concatenations of strings from L (excluding λ)",
+            "c": "The complement of L",
+            "d": "The union of L with itself"
+        },
+        "correctOption": "b",
+        "explanation": "L+ includes all strings that are formed by one or more concatenations of strings from L, and it does not include the empty string. (Lecture 1, Slide 16)"
+    },
+    {
+        "question": "How is a grammar G formally defined in this lecture?",
+        "options": {
+            "a": "G = (T, P, S, V)",
+            "b": "G = (V, T, S, P)",
+            "c": "G = (S, T, P, V)",
+            "d": "G = (P, V, T, S)"
+        },
+        "correctOption": "b",
+        "explanation": "A grammar is defined as a 4-tuple G = (V, T, S, P), where V is the set of variables (non-terminals), T is the set of terminal symbols, S is the start symbol, and P is the set of production rules. (Lecture 1, Slide 17)"
+    },
+    {
+        "question": "In a grammar, what does T represent?",
+        "options": {
+            "a": "The set of variables",
+            "b": "The set of non-terminal symbols",
+            "c": "The set of terminal symbols",
+            "d": "The set of production rules"
+        },
+        "correctOption": "c",
+        "explanation": "T represents the set of terminal symbols – the basic symbols from which strings are formed. (Lecture 1, Slide 17)"
+    },
+    {
+        "question": "In a grammar, what do the symbols in V represent?",
+        "options": {
+            "a": "Terminal symbols",
+            "b": "Production rules",
+            "c": "Variables (non-terminals)",
+            "d": "The start symbol"
+        },
+        "correctOption": "c",
+        "explanation": "V is the set of variables, also called non-terminal symbols, used to help generate strings in the language. (Lecture 1, Slide 17)"
+    },
+    {
+        "question": "What does the notation L(G) denote in the context of grammars?",
+        "options": {
+            "a": "The set of production rules in G",
+            "b": "The language generated by the grammar G",
+            "c": "The set of all variables in G",
+            "d": "The alphabet of G"
+        },
+        "correctOption": "b",
+        "explanation": "L(G) denotes the language generated by the grammar G, i.e., all strings composed entirely of terminal symbols that can be derived from G. (Lecture 1, Slide 18)"
+    },
+    {
+        "question": "Which production rule correctly represents a rule in a grammar?",
+        "options": {
+            "a": "S → aSb | ε",
+            "b": "S → aSb ε",
+            "c": "S a → Sb",
+            "d": "S a b"
+        },
+        "correctOption": "a",
+        "explanation": "Production rules are written in the form S → aSb | ε, indicating S can be replaced by 'aSb' or by the empty string. (Lecture 1, Slide 18)"
+    },
+    {
+        "question": "In converting a language description to a grammar, which rule set correctly generates the language L = {aⁿ bⁿ⁺¹ : n ≥ 0}?",
+        "options": {
+            "a": "S → aSb | ε",
+            "b": "S → Ab,   A → aAb | ε",
+            "c": "S → aAb | b,   A → aAb",
+            "d": "S → aS | b"
+        },
+        "correctOption": "b",
+        "explanation": "The rules S → Ab and A → aAb | ε generate strings with one more b than a's, matching L = {aⁿ bⁿ⁺¹ : n ≥ 0}. (Lecture 1, Slides 21-22)"
+    },
+    {
+        "question": "What is a sentential form in the context of a grammar?",
+        "options": {
+            "a": "A string derived solely from terminal symbols",
+            "b": "A string derived from the start symbol that may include non-terminals",
+            "c": "A set of production rules",
+            "d": "A final accepted string"
+        },
+        "correctOption": "b",
+        "explanation": "A sentential form is any string generated from the start symbol that may contain both terminal and non-terminal symbols during the derivation process. (Lecture 1, Slide 19)"
+    },
+    {
+        "question": "What is represented by a Transition Graph in finite automata?",
+        "options": {
+            "a": "A set of production rules in a grammar",
+            "b": "A diagram showing states and transitions between them",
+            "c": "The sequence of symbols in a language",
+            "d": "A breakdown of concatenation operations"
+        },
+        "correctOption": "b",
+        "explanation": "A Transition Graph visually depicts the states of an automaton and the transitions based on input symbols. (Lecture 1, Slide 24)"
+    },
+    {
+        "question": "What is a finite accepter as described in the lecture?",
+        "options": {
+            "a": "A Turing Machine that accepts a finite language",
+            "b": "A finite automaton that recognizes a language",
+            "c": "A grammar that generates only finite languages",
+            "d": "A device that accepts only finite strings"
+        },
+        "correctOption": "b",
+        "explanation": "A finite accepter is another term for a finite automaton, which is used to recognize (accept or reject) strings in a language. (Lecture 1, Slide 23)"
+    },
+    {
+        "question": "Which property distinguishes a Deterministic Finite Accepter (DFA)?",
+        "options": {
+            "a": "It can have multiple transitions for the same input symbol from a single state",
+            "b": "It uses nondeterministic choices to process inputs",
+            "c": "It has exactly one transition per input symbol in every state",
+            "d": "It relies on recursive production rules for state transitions"
+        },
+        "correctOption": "c",
+        "explanation": "A DFA is defined by having exactly one transition for each state and input symbol combination, ensuring deterministic behavior. (Lecture 1, Slide 30)"
+    },
+    {
+        "question": "What does the extended transition function (δ*) do in a finite automaton?",
+        "options": {
+            "a": "It maps a state and a single symbol to a new state",
+            "b": "It maps a state and an entire string to a state",
+            "c": "It computes the set of all accepted strings",
+            "d": "It reverses the order of states in a transition"
+        },
+        "correctOption": "b",
+        "explanation": "The extended transition function δ* extends the basic transition function to operate on entire strings, mapping a state and a string to the resulting state after processing. (Lecture 1, Slide 32)"
+    },
+    {
+        "question": "How is the extended transition function (δ*) recursively defined?",
+        "options": {
+            "a": "δ*(q, wa) = δ*(q, a)",
+            "b": "δ*(q, ε) = q and δ*(q, wa) = δ(δ*(q, w), a)",
+            "c": "δ*(q, w) = q for every string w",
+            "d": "δ*(q, a) = δ(q, ε) for every symbol a"
+        },
+        "correctOption": "b",
+        "explanation": "The recursive definition of δ* states that for the empty string ε, δ*(q, ε) = q, and for any string wa, δ*(q, wa) = δ(δ*(q, w), a). (Lecture 1, Slide 34)"
+    },
+    {
+        "question": "What does it mean if there is a walk from state q₀ to state q₅ with the label 'abbbaa' in a finite automaton?",
+        "options": {
+            "a": "The automaton loops indefinitely on 'abbbaa'",
+            "b": "The string 'abbbaa' is accepted if q₅ is an accepting state",
+            "c": "q₀ must be an accepting state for the string to be valid",
+            "d": "The automaton must be nondeterministic"
+        },
+        "correctOption": "b",
+        "explanation": "A walk from q₀ to q₅ labeled 'abbbaa' indicates that if q₅ is designated as an accepting state, then the automaton accepts the string 'abbbaa'. (Lecture 1, Slide 33)"
+    },
+    {
+        "question": "Which of the following is an example of a regular language?",
+        "options": {
+            "a": "The set of all balanced parentheses",
+            "b": "The set of all strings of the form (ab)ⁿ, where n ≥ 0",
+            "c": "The language {aⁿbⁿ : n ≥ 0}",
+            "d": "The set of palindromes over {0,1}"
+        },
+        "correctOption": "b",
+        "explanation": "The language consisting of strings that are n repetitions of 'ab' (i.e., (ab)ⁿ) is regular because it can be recognized by a finite automaton. (Lecture 1, Slide 40)"
+    },
+    {
+        "question": "What does the Kleene star operation applied to a language L (denoted L*) include?",
+        "options": {
+            "a": "Only non-empty strings derived from L",
+            "b": "Exactly one string of maximum length from L",
+            "c": "The empty string and all possible finite concatenations of strings from L",
+            "d": "Infinite repetitions of strings in L"
+        },
+        "correctOption": "c",
+        "explanation": "L* includes the empty string (λ) as well as every possible string formed by concatenating zero or more strings from L. (Lecture 1, Slide 16)"
+    },
+    {
+        "question": "What distinguishes regular languages from other formal languages, according to the lecture?",
+        "options": {
+            "a": "They can only be generated by context-free grammars",
+            "b": "They require Turing machines to be recognized",
+            "c": "They can be recognized by finite automata and described by regular expressions",
+            "d": "They have infinite memory requirements"
+        },
+        "correctOption": "c",
+        "explanation": "Regular languages are precisely those languages that can be recognized by finite automata and generated using regular expressions. (Lecture 1, Slide 42)"
+    }
+]

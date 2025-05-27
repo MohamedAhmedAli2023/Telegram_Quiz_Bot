@@ -1,0 +1,862 @@
+[
+    {
+        "question": "An image is considered to be a function of a(x,y), where a represents:",
+        "options": {
+            "a": "Height of image",
+            "b": "Amplitude of image",
+            "c": "Width of image",
+            "d": "Resolution of image"
+        },
+        "correctOption": "b",
+        "explanation": "An image is represented as a 2D function f(x,y) or a(x,y), where (x,y) are spatial coordinates. The value of this function at any point (x,y) is its amplitude, which corresponds to the image's intensity or gray level at that point. (Lecture 1, Page 3)"
+    },
+    {
+        "question": "What is a pixel?",
+        "options": {
+            "a": "Pixel is the elements of a digital image",
+            "b": "Pixel is the elements of an analog image",
+            "c": "Pixel is the cluster of a digital image",
+            "d": "Pixel is the cluster of an analog image"
+        },
+        "correctOption": "a",
+        "explanation": "A digital image is composed of picture elements, also known as pixels. Each pixel is the smallest addressable element in a digital image display. (Lecture 1, Page 3)"
+    },
+    {
+        "question": "Digital image processing is a _____ type of processing.",
+        "options": {
+            "a": "Hardware",
+            "b": "Software",
+            "c": "Logical",
+            "d": "All the above"
+        },
+        "correctOption": "d",
+        "explanation": "Digital image processing involves using digital computers (hardware component) to process images using algorithms and codes (software and logical components). (Lecture 1, Page 8)"
+    },
+    {
+        "question": "A basic image is represented in ___ dimensions.",
+        "options": {
+            "a": "1D",
+            "b": "2D",
+            "c": "3D",
+            "d": "4D"
+        },
+        "correctOption": "b",
+        "explanation": "A standard image is represented as a 2-D function f(x,y), where x and y are spatial coordinates. (Lecture 1, Page 3)"
+    },
+    {
+        "question": "The grey color of the image lies between ____ colors.",
+        "options": {
+            "a": "White and red",
+            "b": "Black and green",
+            "c": "Black and red",
+            "d": "White and black"
+        },
+        "correctOption": "d",
+        "explanation": "In a grayscale image, pixel values represent shades of gray. The value l=0 is considered black, and l=L-1 (e.g., 255 for 8-bit) is considered white. All intermediate values are shades of gray varying from black to white. (Lecture 1, Page 18)"
+    },
+    {
+        "question": "Each color-based pixel holds ___ bits of color values.",
+        "options": {
+            "a": "16",
+            "b": "24",
+            "c": "32",
+            "d": "Both c and b"
+        },
+        "correctOption": "b",
+        "explanation": "A common representation for full-color images (like RGB) uses 8 bits for each of the three primary color components (Red, Green, Blue), resulting in a total of 24 bits per pixel. (Lecture 4, Page 16; Lecture 1, Page 7 shows a 24-bit color image)"
+    },
+    {
+        "question": "Image processing involves how many steps?",
+        "options": {
+            "a": "7",
+            "b": "8",
+            "c": "10",
+            "d": "13"
+        },
+        "correctOption": "a",
+        "explanation": "The image processing pipeline described involves 7 main steps: Acquisition and storage, Manipulation/enhancement/restoration, Segmentation, Morphological processing, Information extraction/representation, Image understanding/interpretation, and Image compression. (Lecture 1, Pages 10-13)"
+    },
+    {
+        "question": "Which of the following statements describes the term pixel depth?",
+        "options": {
+            "a": "It is the number of units used to represent each pixel in RGB space",
+            "b": "It is the number of mm used to represent each pixel in RGB space",
+            "c": "It is the number of bits used to represent each pixel in RGB space",
+            "d": "It is the number of bytes used to represent each pixel in RGB space"
+        },
+        "correctOption": "c",
+        "explanation": "Pixel depth (or bit depth) refers to the number of bits used to represent the color or intensity of each pixel. For an RGB image, this typically means the total bits for all channels per pixel. (Lecture 1, Page 4; Lecture 4, Page 16)"
+    },
+    {
+        "question": "Which of the following is the first step in Image Processing?",
+        "options": {
+            "a": "Segmentation",
+            "b": "Image enhancement",
+            "c": "Image acquisition",
+            "d": "Image restoration"
+        },
+        "correctOption": "c",
+        "explanation": "The first step in the image processing pipeline is image acquisition, which involves capturing the image. (Lecture 1, Page 10)"
+    },
+    {
+        "question": "If the pixel value is ‘0’ then it represents ___ color?",
+        "options": {
+            "a": "White",
+            "b": "Grey",
+            "c": "Red",
+            "d": "Black"
+        },
+        "correctOption": "d",
+        "explanation": "In a grayscale image representation, a pixel value of 0 typically represents black, while the maximum value (e.g., 255 for 8-bit) represents white. (Lecture 1, Page 18)"
+    },
+    {
+        "question": "The transition between continuous values of the image function and its digital equivalent is called ______________",
+        "options": {
+            "a": "Sampling",
+            "b": "Quantization",
+            "c": "Rasterization",
+            "d": "None of the Mentioned"
+        },
+        "correctOption": "b",
+        "explanation": "Quantization is the process of converting continuous amplitude values of an image function into a finite set of discrete digital values. (Lecture 2, Page 6)"
+    },
+    {
+        "question": "A continuous image is digitized at _______ points.",
+        "options": {
+            "a": "random",
+            "b": "vertex",
+            "c": "contour",
+            "d": "sampling"
+        },
+        "correctOption": "d",
+        "explanation": "Digitizing the coordinate values of a continuous image is called sampling. This means the continuous image is sampled at discrete points. (Lecture 2, Page 2)"
+    },
+    {
+        "question": "The smallest discernible change in intensity level is called ____________",
+        "options": {
+            "a": "Intensity Resolution",
+            "b": "Contour",
+            "c": "Saturation",
+            "d": "Contrast"
+        },
+        "correctOption": "a",
+        "explanation": "Intensity resolution refers to the smallest discernible change in intensity level. It is determined by the number of bits used for quantization. (Lecture 2, Pages 6, 10)"
+    },
+    {
+        "question": "The type of Interpolation where the intensity of the FOUR neighboring pixels is used to obtain intensity in a new location is called ___________",
+        "options": {
+            "a": "cubic interpolation",
+            "b": "nearest neighbor interpolation",
+            "c": "bilinear interpolation",
+            "d": "bicubic interpolation"
+        },
+        "correctOption": "c",
+        "explanation": "Bilinear interpolation estimates the intensity at a new location by using the intensity of its four closest neighboring pixels. (Lecture 2, Page 16)"
+    },
+    {
+        "question": "What is the name of the process in which the known data is utilized to evaluate the value at an unknown location?",
+        "options": {
+            "a": "Acquisition",
+            "b": "Pixelation",
+            "c": "Quantization",
+            "d": "Interpolation"
+        },
+        "correctOption": "d",
+        "explanation": "Interpolation is the process of estimating unknown values that lie between known data points. In image processing, it's used in up-sampling to determine pixel values at new locations. (Lecture 2, Pages 15-16)"
+    },
+    {
+        "question": "Digitizing the coordinate values is called_____________ .",
+        "options": {
+            "a": "radiance",
+            "b": "illuminance",
+            "c": "quantization",
+            "d": "sampling"
+        },
+        "correctOption": "d",
+        "explanation": "Sampling is the process of digitizing the spatial coordinate values (x,y) of an image. (Lecture 2, Page 2)"
+    },
+    {
+        "question": "Black and white pixels of the image are represented in matrix as______.",
+        "options": {
+            "a": "1 and 2",
+            "b": "0 and 2",
+            "c": "0 and 1",
+            "d": "0 and -1"
+        },
+        "correctOption": "c",
+        "explanation": "In a binary image (black and white), pixels are typically represented by two values, 0 (for black) and 1 (for white), or vice versa depending on the convention. (Lecture 2, Page 10)"
+    },
+    {
+        "question": "Digitizing the image requires____.",
+        "options": {
+            "a": "reflection",
+            "b": "sampling",
+            "c": "quantization",
+            "d": "Both B and c"
+        },
+        "correctOption": "d",
+        "explanation": "Digitizing an image involves two main steps: sampling (digitizing coordinate values) and quantization (digitizing amplitude values). (Lecture 2, Page 2)"
+    },
+    {
+        "question": "bilinear interpolation or cubic interpolation can achieve a better quality of the reconstructed image.",
+        "options": {
+            "a": "True",
+            "b": "False"
+        },
+        "correctOption": "a",
+        "explanation": "Bilinear and cubic interpolation techniques generally produce higher quality reconstructed images compared to simpler methods like nearest neighbor interpolation, as they consider more information from neighboring pixels. (Lecture 2, Page 16)"
+    },
+    {
+        "question": "A sampling rate of a discrete-time signal x(n) can be increased by a factor L by placing L+1 equally spaced zeros between each pair of samples",
+        "options": {
+            "a": "True",
+            "b": "False"
+        },
+        "correctOption": "b",
+        "explanation": "To increase the sampling rate by a factor L (up-sampling), L-1 zeros are placed between each pair of samples, not L+1. (Lecture 2, Page 20)"
+    },
+    {
+        "question": "Which of the following statements is true regarding negative transformation in image processing?",
+        "options": {
+            "a": "Negative transformation enhances the overall brightness of an image.",
+            "b": "In negative transformation, pixel values are inverted to their complementary values.",
+            "c": "Negative transformation is primarily used for color correction in images.",
+            "d": "Negative transformation has no impact on the contrast of an image."
+        },
+        "correctOption": "b",
+        "explanation": "Negative transformation inverts pixel intensity values. For an image with intensity levels [0, L-1], the transformation is S = (L-1) - r, effectively inverting dark pixels to bright and bright to dark. (Lecture 3, Pages 3, 5)"
+    },
+    {
+        "question": "How can the choice of threshold value in Grayscale Threshold Transform impact the resulting binary image?",
+        "options": {
+            "a": "It does not affect the binary image.",
+            "b": "It can change the size of the binary image.",
+            "c": "It determines the color of the binary image.",
+            "d": "It affects which pixels are considered foreground or background."
+        },
+        "correctOption": "d",
+        "explanation": "The threshold value in a Grayscale Threshold Transform acts as a dividing line to separate pixels into two classes, typically foreground and background, based on their intensity. (Lecture 3, Page 8)"
+    },
+    {
+        "question": "What happens to the overall contrast of an image after applying a negative transformation?",
+        "options": {
+            "a": "Contrast increases.",
+            "b": "Contrast decreases.",
+            "c": "No change in contrast.",
+            "d": "Contrast becomes random."
+        },
+        "correctOption": "a",
+        "explanation": "Negative transformation can enhance white or grey details embedded in dark regions, effectively increasing the local contrast and making these details more visible. (Lecture 3, Page 5)"
+    },
+    {
+        "question": "What happens when you combine all the bit-planes back together after slicing?",
+        "options": {
+            "a": "Image is compressed",
+            "b": "Original image is reconstructed",
+            "c": "Image is rotated",
+            "d": "Image contrast is enhanced"
+        },
+        "correctOption": "b",
+        "explanation": "Combining all the individual bit-planes of an image will reconstruct the original image, as each bit-plane holds a part of the total intensity information. (Lecture 3, Page 22 implies this by reconstructing an approximation from several higher-order planes)."
+    },
+    {
+        "question": "Which of the following statements is true about binary images obtained through Grayscale Threshold Transform?",
+        "options": {
+            "a": "Binary images have higher resolution than grayscale images.",
+            "b": "Binary images contain more colors than grayscale images.",
+            "c": "Binary images are always larger in file size.",
+            "d": "Binary images only have two-pixel intensity values."
+        },
+        "correctOption": "d",
+        "explanation": "A Grayscale Threshold Transform converts a grayscale image into a binary image, where each pixel has one of two possible intensity values (e.g., 0 for black and L-1 or 1 for white). (Lecture 3, Page 7)"
+    },
+    {
+        "question": "What is the purpose of clipping in image processing?",
+        "options": {
+            "a": "Improving image contrast.",
+            "b": "Converting a grayscale image to a binary image.",
+            "c": "Enhancing overall brightness.",
+            "d": "Removing unwanted portions of an image."
+        },
+        "correctOption": "d",
+        "explanation": "Image clipping is used to remove uninteresting or unnecessary background portions of an image, focusing attention on the main subject. (Lecture 3, Page 13)"
+    },
+    {
+        "question": "What is the primary purpose of Grayscale Threshold Transform in image processing?",
+        "options": {
+            "a": "Enhancing overall brightness.",
+            "b": "Creating a color correction effect.",
+            "c": "Converting a grayscale image to a binary image.",
+            "d": "Improving image contrast."
+        },
+        "correctOption": "c",
+        "explanation": "The main purpose of a Grayscale Threshold Transform is to convert a grayscale image into a black-and-white binary image by separating pixels based on a threshold value. (Lecture 3, Page 7)"
+    },
+    {
+        "question": "In a negative image, what color would a white pixel appear as?",
+        "options": {
+            "a": "Red",
+            "b": "Blue",
+            "c": "Green",
+            "d": "Black"
+        },
+        "correctOption": "d",
+        "explanation": "In a negative transformation, white pixels (high intensity) are converted to black pixels (low intensity), and vice versa. (Lecture 3, Page 4)"
+    },
+    {
+        "question": "The most significant bit (MSB) represents the finest details and textures in an image during bit-plane slicing.",
+        "options": {
+            "a": "True",
+            "b": "false"
+        },
+        "correctOption": "b",
+        "explanation": "Higher-order bit-planes (like the MSB plane) represent coarse structural information or significant changes in intensity. Finer details are usually represented by lower-order bit-planes. (Lecture 3, Pages 16, 21-22)"
+    },
+    {
+        "question": "Clipping is an essential step in the process of resizing images.",
+        "options": {
+            "a": "True",
+            "b": "false"
+        },
+        "correctOption": "b",
+        "explanation": "Clipping removes parts of an image. Resizing (scaling) changes the dimensions of the entire image, typically using interpolation, and is a different operation. (Lecture 3, Pages 13-14)"
+    },
+    {
+        "question": "Full-color images have at least___________",
+        "options": {
+            "a": "2 components",
+            "b": "3 components",
+            "c": "4 components",
+            "d": "5 components"
+        },
+        "correctOption": "b",
+        "explanation": "Full-color images, such as those in the RGB color model, are typically represented by at least three components (e.g., Red, Green, and Blue). (Lecture 4, Pages 15, 16)"
+    },
+    {
+        "question": "Hue and saturation, both together produce___________",
+        "options": {
+            "a": "brightness",
+            "b": "transitivity",
+            "c": "chromaticity",
+            "d": "reflectivity"
+        },
+        "correctOption": "c",
+        "explanation": "Hue and saturation are components of color that, when combined, define the chromaticity of a color. (Lecture 4, Page 13)"
+    },
+    {
+        "question": "Green plus blue color produces",
+        "options": {
+            "a": "yellow",
+            "b": "red",
+            "c": "magenta",
+            "d": "cyan"
+        },
+        "correctOption": "d",
+        "explanation": "In additive color models (like RGB light), mixing green and blue light produces cyan. (Lecture 4, Page 11)"
+    },
+    {
+        "question": "White color in a Cartesian coordinate system can be represented as _______",
+        "options": {
+            "a": "(0,1,1)",
+            "b": "(0,1,0)",
+            "c": "(0,0,1)",
+            "d": "(1,1,1)"
+        },
+        "correctOption": "d",
+        "explanation": "In a normalized RGB color model (where values range from 0 to 1), white is represented by the maximum value for all three components (Red=1, Green=1, Blue=1). (Lecture 4, Page 15)"
+    },
+    {
+        "question": "Three primary colors are _________",
+        "options": {
+            "a": "Red, green, blue",
+            "b": "Red, cyan, blue",
+            "c": "Red, white, black",
+            "d": "Red, green, yellow"
+        },
+        "correctOption": "a",
+        "explanation": "The three primary colors used in additive color models for displays are Red, Green, and Blue. (Lecture 4, Page 12)"
+    },
+    {
+        "question": "Brightness of the light is a subject __________",
+        "options": {
+            "a": "oriented",
+            "b": "descriptor",
+            "c": "matter",
+            "d": "defined"
+        },
+        "correctOption": "b",
+        "explanation": "Brightness is a subjective descriptor that describes how intense or luminous a light source appears to an observer. (Lecture 4, Page 10)"
+    },
+    {
+        "question": "The total amount of energy from the light source is called_______",
+        "options": {
+            "a": "brightness",
+            "b": "reflectance",
+            "c": "luminance",
+            "d": "radiance"
+        },
+        "correctOption": "d",
+        "explanation": "Radiance is the total amount of light energy emitted, reflected, or transmitted by a source per unit time, per unit area. (Lecture 4, Page 10)"
+    },
+    {
+        "question": "Color model is also called _________",
+        "options": {
+            "a": "color system",
+            "b": "color space",
+            "c": "color area",
+            "d": "Both A and B"
+        },
+        "correctOption": "d",
+        "explanation": "A color model is also referred to as a color space or a color system. It facilitates the specification of color in a standard fashion. (Lecture 4, Page 14)"
+    },
+    {
+        "question": "The CMYK color model is commonly used for color printing and represents colors using four channels: Cyan, Magenta, Yellow, and Key (black).",
+        "options": {
+            "a": "True",
+            "b": "false"
+        },
+        "correctOption": "a",
+        "explanation": "The CMYK color model, used in printing, represents colors using four ink channels: Cyan, Magenta, Yellow, and Key (black). (Lecture 4, Page 14)"
+    },
+    {
+        "question": "Radiance is measured in _______",
+        "options": {
+            "a": "joule",
+            "b": "watt",
+            "c": "lumens",
+            "d": "meter"
+        },
+        "correctOption": "b",
+        "explanation": "Radiance, which is the total amount of light energy emitted, reflected, or transmitted per unit time per unit area, is measured in Watts. (Lecture 4, Page 10)"
+    },
+    {
+        "question": "Digital functions' derivatives are defined as",
+        "options": {
+            "a": "differences",
+            "b": "multiplication",
+            "c": "addition",
+            "d": "division"
+        },
+        "correctOption": "a",
+        "explanation": "In digital image processing, derivatives are approximated using differences between pixel values. For example, first-order derivatives use differences like (f(x+1) - f(x)). (General concept, implied by filter masks like Roberts, Prewitt, Sobel)."
+    },
+    {
+        "question": "For line detection we use a mask that is",
+        "options": {
+            "a": "Gaussian",
+            "b": "Laplacian",
+            "c": "ideal",
+            "d": "Butterworth"
+        },
+        "correctOption": "b",
+        "explanation": "Second-order derivatives, such as those computed by Laplacian masks, have a stronger response to fine details like thin lines and produce thinner lines than first derivatives. (Lecture 5, Pages 8, 12, 13)"
+    },
+    {
+        "question": "If the inner region of the object is textured, then the approach we use is",
+        "options": {
+            "a": "discontinuity",
+            "b": "similarity",
+            "c": "extraction",
+            "d": "recognition"
+        },
+        "correctOption": "b",
+        "explanation": "Segmentation algorithms are based on discontinuity (e.g., edges) or similarity. Textured regions are characterized by similarity of their properties (e.g., pattern, intensity distribution). (Lecture 5, Pages 4, 6, 7)"
+    },
+    {
+        "question": "Segmentation is a process of",
+        "options": {
+            "a": "Low-level process",
+            "b": "Edge level process",
+            "c": "Mid-level process",
+            "d": "High-level process"
+        },
+        "correctOption": "c",
+        "explanation": "Segmentation partitions an image into regions or objects. The outputs (attributes extracted from these regions) are often considered part of mid-level processing, which bridges low-level pixel processing and high-level interpretation. (Lecture 1, Page 9, 11 defines segmentation as a step leading to extraction of attributes)."
+    },
+    {
+        "question": "Thresholding formulation measures the difference between",
+        "options": {
+            "a": "2 neighbors",
+            "b": "4 neighbors",
+            "c": "6 neighbors",
+            "d": "8 neighbors"
+        },
+        "correctOption": null,
+        "explanation": "Basic thresholding (T) compares an individual pixel's intensity f(x,y) to the threshold T (f(x,y) > T or f(x,y) <= T). It doesn't directly measure differences between N neighbors in its primary definition. This question might be ill-posed for basic thresholding or refer to specific adaptive thresholding neighbor comparisons not detailed in this context. No answer was marked in the provided assignment sheet."
+    },
+    {
+        "question": "First derivatives in image segmentation produce",
+        "options": {
+            "a": "Thick edge",
+            "b": "Thin edge",
+            "c": "Fine edge",
+            "d": "None of the above"
+        },
+        "correctOption": "a",
+        "explanation": "First-order derivatives (like Sobel, Prewitt) generally produce thicker edges compared to second-order derivatives. (Lecture 5, Pages 8, 16)"
+    },
+    {
+        "question": "For finding horizontal lines we use a mask of values",
+        "options": {
+            "a": "[-1 -1 -1; 2 2 2; -1 -1 -1]",
+            "b": "[2 -1 -1; -1 2 -1; -1 -1 2]",
+            "c": "[-1 2 -1; -1 2 -1; -1 2 -1]",
+            "d": "[-1 -1 2; -1 2 -1;2 -1 -1]"
+        },
+        "correctOption": "a",
+        "explanation": "The mask [-1 -1 -1; 2 2 2; -1 -1 -1] is designed to detect horizontal lines by emphasizing horizontal differences. (Lecture 5, Page 14)"
+    },
+    {
+        "question": "Thresholding is an example of",
+        "options": {
+            "a": "Continuity",
+            "b": "Similarity",
+            "c": "Recognition",
+            "d": "Discontinuity"
+        },
+        "correctOption": "b",
+        "explanation": "Thresholding groups pixels based on the similarity of their intensity values relative to a threshold, partitioning the image into regions that are similar according to this criterion. (Lecture 5, Page 6)"
+    },
+    {
+        "question": "Image segmentation can be used in medical imaging for tasks such as tumor detection and tissue classification.",
+        "options": {
+            "a": "True",
+            "b": "False"
+        },
+        "correctOption": "a",
+        "explanation": "Image segmentation is widely used in medical imaging to locate objects like tumors and to classify different types of tissues. (General application, supported by context in Lecture 5, Page 25 where thresholding (a segmentation technique) is linked to tumor identification in scans)."
+    },
+    {
+        "question": "For diagonal edge detection we use",
+        "options": {
+            "a": "1D mask",
+            "b": "2D mask",
+            "c": "3D mask",
+            "d": "4D mask"
+        },
+        "correctOption": "b",
+        "explanation": "Edge detection operators, including those for diagonal edges like specific Prewitt or Sobel masks, are typically 2D masks (e.g., 3x3 kernels). (Lecture 5, Pages 20, 21)"
+    },
+    {
+        "question": "What is region-based segmentation in image processing?",
+        "options": {
+            "a": "Dividing an image into regions based on color or intensity homogeneity",
+            "b": "Enhancing edges in an image to separate different objects",
+            "c": "Detecting key points in an image to describe its content",
+            "d": "Classifying pixels into predefined categories based on their features"
+        },
+        "correctOption": "a",
+        "explanation": "Region-based segmentation partitions an image into regions where pixels within each region are similar based on criteria like color or intensity homogeneity. (Lecture 6, Pages 2, 3)"
+    },
+    {
+        "question": "What is the primary advantage of region-based segmentation over edge-based segmentation?",
+        "options": {
+            "a": "Region-based segmentation is faster.",
+            "b": "Region-based segmentation is more robust to noise.",
+            "c": "Region-based segmentation preserves object boundaries more accurately.",
+            "d": "Region-based segmentation requires less computational resources."
+        },
+        "correctOption": "b",
+        "explanation": "Region-based segmentation techniques are generally more robust to noise compared to edge-based methods because they consider properties of entire regions rather than just local discontinuities. (Lecture 6, Page 3)"
+    },
+    {
+        "question": "Which of the following is NOT a step-in region-based segmentation?",
+        "options": {
+            "a": "Initialization",
+            "b": "Region growing",
+            "c": "Edge detection",
+            "d": "Region merging"
+        },
+        "correctOption": "c",
+        "explanation": "Region-based segmentation techniques like region growing or splitting/merging focus on grouping pixels into regions based on similarity. Edge detection, which finds discontinuities, is a different approach to segmentation. (Lecture 6, Pages 4-6, 11)"
+    },
+    {
+        "question": "Which region-based segmentation algorithm is based on the idea of iteratively merging adjacent regions with the most similar properties?",
+        "options": {
+            "a": "Region growing",
+            "b": "K-means clustering",
+            "c": "Mean-shift algorithm",
+            "d": "Region splitting and merging algorithm"
+        },
+        "correctOption": "d",
+        "explanation": "The region splitting and merging algorithm involves iteratively splitting inhomogeneous regions and merging adjacent homogeneous regions based on similarity criteria. (Lecture 6, Page 11)"
+    },
+    {
+        "question": "In region-based segmentation, what does the term \"homogeneity\" refer to?",
+        "options": {
+            "a": "The consistency of pixel values within a region",
+            "b": "The number of pixels in a region",
+            "c": "The proximity of regions to each other",
+            "d": "The complexity of region boundaries"
+        },
+        "correctOption": "a",
+        "explanation": "Homogeneity in region-based segmentation refers to the property that pixels within a single region are similar according to some predefined predicate (e.g., similar intensity, color, or texture). (Lecture 6, Page 11)"
+    },
+    {
+        "question": "What happens to the boundaries of objects in an image when performing dilation?",
+        "options": {
+            "a": "They shrink inward",
+            "b": "They expand outward",
+            "c": "They remain unchanged",
+            "d": "They become smoother"
+        },
+        "correctOption": "b",
+        "explanation": "Dilation is a morphological operation that expands or thickens objects in an image, causing their boundaries to expand outward. (Lecture 6, Pages 30, 35, 39)"
+    },
+    {
+        "question": "In morphological operations, what is the purpose of a structuring element?",
+        "options": {
+            "a": "To determine the shape of the resulting image",
+            "b": "To specify the size of the resulting image",
+            "c": "To adjust the intensity of pixels in the resulting image",
+            "d": "To define the neighborhood of each pixel for the operation"
+        },
+        "correctOption": "d",
+        "explanation": "A structuring element is a small shape or template used to probe an image. It defines the neighborhood of pixels that are considered when performing a morphological operation at each pixel location. (Lecture 6, Page 27)"
+    },
+    {
+        "question": "Erosion is a morphological operation that expands the boundaries of objects in an image.",
+        "options": {
+            "a": "True",
+            "b": "false"
+        },
+        "correctOption": "b",
+        "explanation": "Erosion is a morphological operation that shrinks or thins objects in an image, effectively eroding their boundaries. (Lecture 6, Pages 30, 31, 34)"
+    },
+    {
+        "question": "The result of a morphological operation depends on the size and shape of the structuring element used.",
+        "options": {
+            "a": "true",
+            "b": "false"
+        },
+        "correctOption": "a",
+        "explanation": "The size and shape of the structuring element are critical in morphological operations as they determine how the image features are modified. (Lecture 6, Page 27)"
+    },
+    {
+        "question": "Which of the following basic morphological operations is used to shrink objects in binary images?",
+        "options": {
+            "a": "Dilation",
+            "b": "Erosion",
+            "c": "Opening",
+            "d": "Closing"
+        },
+        "correctOption": "b",
+        "explanation": "Erosion is the fundamental morphological operation used to shrink or thin objects in a binary image. (Lecture 6, Pages 30, 34)"
+    },
+    {
+        "question": "Which of the following is NOT a type of smoothing spatial filter?",
+        "options": {
+            "a": "Gaussian filter",
+            "b": "Laplacian filter",
+            "c": "Mean filter",
+            "d": "Median filter"
+        },
+        "correctOption": "b",
+        "explanation": "Laplacian filters are sharpening filters used for enhancing edges and fine details, not for smoothing. Smoothing filters (like Gaussian, Mean, Median) aim to reduce noise and blur images. (Lecture 7, Page 36; Lecture 5, Page 9)"
+    },
+    {
+        "question": "Which smoothing filter is particularly effective in removing salt-and-pepper noise while preserving edges?",
+        "options": {
+            "a": "Gaussian filter",
+            "b": "Mean filter",
+            "c": "Median filter",
+            "d": "Laplacian filter"
+        },
+        "correctOption": "c",
+        "explanation": "The Median filter is highly effective at removing salt-and-pepper (impulse) noise while being better at preserving edges compared to linear smoothing filters like the Mean filter. (Lecture 7, Page 41; Lecture 8 - Noise Removal, Page 22)"
+    },
+    {
+        "question": "Which of the following is a property of a Gaussian filter?",
+        "options": {
+            "a": "It applies a weighted average to pixel values in the neighborhood.",
+            "b": "It replaces each pixel value with the median value of the neighborhood.",
+            "c": "It enhances edges by subtracting a blurred version of the image.",
+            "d": "It amplifies high-frequency noise."
+        },
+        "correctOption": "a",
+        "explanation": "A Gaussian filter is a linear smoothing filter that computes a weighted average of pixel values in a neighborhood, where the weights are determined by a Gaussian function. (Lecture 7, Page 39)"
+    },
+    {
+        "question": "In image processing, the size of the kernel used in a spatial filter determines:",
+        "options": {
+            "a": "The degree of smoothing applied to the image",
+            "b": "The amount of noise reduction achieved",
+            "c": "The computational complexity of the filter",
+            "d": "All of the above"
+        },
+        "correctOption": "d",
+        "explanation": "The kernel size in a spatial filter influences the extent of smoothing or sharpening, the effectiveness of noise reduction, and the computational resources required for the filtering operation. (General knowledge, supported by filter properties)."
+    },
+    {
+        "question": "Which smoothing filter tends to blur sharp edges while reducing noise?",
+        "options": {
+            "a": "Gaussian filter",
+            "b": "Median filter",
+            "c": "Laplacian filter",
+            "d": "Mean filter"
+        },
+        "correctOption": "d",
+        "explanation": "Mean filters (averaging filters) reduce noise by averaging pixel values but also tend to blur sharp edges and details in the image. Gaussian filters also blur but can offer a better trade-off. (Lecture 7, Pages 35, 37, 38)"
+    },
+    {
+        "question": "Which of the following is NOT a type of spatial filter?",
+        "options": {
+            "a": "Smoothing filter",
+            "b": "Sharpening filter",
+            "c": "Frequency filter",
+            "d": "Edge detection filter"
+        },
+        "correctOption": "c",
+        "explanation": "Spatial filters operate directly on pixels in the spatial domain. Frequency filters operate on the image's representation in the frequency domain (e.g., after a Fourier transform). (Lecture 7, Page 2, 3)"
+    },
+    {
+        "question": "What is the primary purpose of a spatial filter in image processing?",
+        "options": {
+            "a": "To enhance spatial resolution",
+            "b": "To reduce noise and enhance image quality",
+            "c": "To improve color saturation",
+            "d": "To compress image data"
+        },
+        "correctOption": "b",
+        "explanation": "Spatial filters are used for various purposes, including noise reduction (smoothing filters) and detail enhancement (sharpening filters), both contributing to overall image quality enhancement. (Lecture 7, Page 35)"
+    },
+    {
+        "question": "A spatial filter's kernel size does not affect the degree of smoothing applied to the image.",
+        "options": {
+            "a": "True",
+            "b": "false"
+        },
+        "correctOption": "b",
+        "explanation": "The kernel size directly impacts the degree of smoothing. For averaging filters, a larger kernel considers more pixels, leading to greater smoothing. (General property of spatial filters)."
+    },
+    {
+        "question": "How does a spatial filter accomplish smoothing similar to a lowpass filter in frequency domain processing?",
+        "options": {
+            "a": "By reducing the spatial dimensions of the image",
+            "b": "By adjusting the color balance of the image",
+            "c": "By averaging pixel values in the neighborhood to attenuate high-frequency components",
+            "d": "By enhancing high-frequency components in the image"
+        },
+        "correctOption": "c",
+        "explanation": "Smoothing spatial filters, like mean or Gaussian filters, average pixel values. This averaging process attenuates sharp transitions (high-frequency components), similar to how a lowpass filter in the frequency domain passes low frequencies and blocks high frequencies. (Lecture 7, Pages 2, 37)"
+    },
+    {
+        "question": "Which filter replaces each pixel value with the average of the pixel values in its neighborhood?",
+        "options": {
+            "a": "Gaussian filter",
+            "b": "Median filter",
+            "c": "Laplacian filter",
+            "d": "Mean filter"
+        },
+        "correctOption": "d",
+        "explanation": "A mean filter (or averaging filter) replaces each pixel's value with the average of the intensity values in its local neighborhood. (Lecture 7, Pages 37, 38)"
+    },
+    {
+        "question": "In the spatial domain of an image, information is represented by:",
+        "options": {
+            "a": "Frequency components",
+            "b": "Pixel intensities and their locations",
+            "c": "Edges and shapes",
+            "d": "Color channels (RGB)"
+        },
+        "correctOption": "b",
+        "explanation": "The spatial domain of an image directly deals with pixel values (intensities) at specific spatial coordinates (locations). (Fundamental concept of image representation)."
+    },
+    {
+        "question": "Haar transform finds applications in both lossy and lossless compression. What does \"lossy compression\" in the context of the Haar transform imply?",
+        "options": {
+            "a": "The Haar transform only works for grayscale images.",
+            "b": "The original image can be perfectly reconstructed after compression.",
+            "c": "Some information from the original image may be lost during compression.",
+            "d": "It requires a specific color space (e.g., RGB) for processing."
+        },
+        "correctOption": "c",
+        "explanation": "Lossy compression means that some data from the original image is discarded during the compression process to achieve a higher compression ratio. This lost information cannot be fully recovered upon decompression. (General definition of lossy compression)."
+    },
+    {
+        "question": "In which image compression standard is the DCT particularly prevalent?",
+        "options": {
+            "a": "JPEG",
+            "b": "PNG",
+            "c": "GIF",
+            "d": "BMP"
+        },
+        "correctOption": "a",
+        "explanation": "The Discrete Cosine Transform (DCT) is a core component of the JPEG image compression standard, used to transform image blocks into frequency coefficients for quantization and encoding. (Widely known fact in image compression)."
+    },
+    {
+        "question": "After image transformation , we can revert to the initial domain",
+        "options": {
+            "a": "true",
+            "b": "false"
+        },
+        "correctOption": "a",
+        "explanation": "Many image transformations, such as Fourier Transform, DCT, and Wavelet Transforms (like Haar), are reversible, meaning an inverse transform exists that can reconstruct the original image from the transformed data (perfectly for lossless, approximately for lossy after quantization). (General property of many image transforms)."
+    },
+    {
+        "question": "Which mathematical transformation converts spatial information into frequency information in image processing?",
+        "options": {
+            "a": "Fourier transform",
+            "b": "Discrete cosine transform",
+            "c": "Discrete Fourier transform",
+            "d": "All of them"
+        },
+        "correctOption": "d",
+        "explanation": "The Fourier Transform (and its discrete version, DFT) directly converts spatial domain information into frequency domain representation. The Discrete Cosine Transform (DCT) also transforms spatial data into frequency-like coefficients representing different frequency components. (Commonly known properties of these transforms)."
+    },
+    {
+        "question": "What is the primary function of the Discrete Cosine Transform (DCT) in image and video compression standards like JPEG and MPEG?",
+        "options": {
+            "a": "Sharpening of image details",
+            "b": "Noise reduction",
+            "c": "Data compression",
+            "d": "Color space transformation"
+        },
+        "correctOption": "c",
+        "explanation": "The DCT is primarily used for data compression in standards like JPEG and MPEG due to its excellent energy compaction property, which concentrates most of the signal's energy into a few coefficients. (Key application of DCT)."
+    },
+    {
+        "question": "Why is the frequency domain often used in image processing tasks?",
+        "options": {
+            "a": "To directly modify pixel intensities for brightness adjustment",
+            "b": "To analyze repetitive patterns and filter out noise effectively",
+            "c": "To perform color space transformations for segmentation",
+            "d": "To achieve geometric transformations like rotation"
+        },
+        "correctOption": "b",
+        "explanation": "The frequency domain representation highlights periodic patterns and allows for effective filtering of noise (e.g., periodic noise) by manipulating specific frequency components. (Lecture 8 - Image Restoration: Noise Removal, Page 33 discusses periodic noise removal in Fourier domain)."
+    },
+    {
+        "question": "The DCT transforms an image from the spatial domain to the:",
+        "options": {
+            "a": "Color space domain (e.g., RGB)",
+            "b": "Frequency domain (distribution of frequencies)",
+            "c": "Morphological domain (erosion/dilation)",
+            "d": "Compressed domain (reduced image size)"
+        },
+        "correctOption": "b",
+        "explanation": "The Discrete Cosine Transform (DCT) converts blocks of image pixels from the spatial domain into a set of frequency coefficients, representing the image data in terms of different frequency components. (Fundamental property of DCT)."
+    },
+    {
+        "question": "How is the Haar transform beneficial in signal and image processing?",
+        "options": {
+            "a": "Lossless data compression",
+            "b": "Color enhancement",
+            "c": "Feature extraction",
+            "d": "Noise addition"
+        },
+        "correctOption": "c",
+        "explanation": "The Haar transform, being a simple wavelet transform, can be used for feature extraction by capturing local spatial and frequency characteristics, such as edges or abrupt changes at different scales. (Application of wavelet transforms)."
+    },
+    {
+        "question": "An image processing technique needs to compress a medical scan image for efficient storage. Which advantage of image transformation is most relevant here?",
+        "options": {
+            "a": "It simplifies calculations for 2D convolution.",
+            "b": "It isolates features for easier analysis.",
+            "c": "It allows for reversible changes to the original image.",
+            "d": "It facilitates compact representation for storage and transmission."
+        },
+        "correctOption": "d",
+        "explanation": "Image transformations like DCT or wavelet transforms are used in compression because they can represent the image data more compactly by concentrating energy into fewer significant coefficients, thus facilitating efficient storage and transmission. (Primary goal of transform coding in compression)."
+    }
+]
